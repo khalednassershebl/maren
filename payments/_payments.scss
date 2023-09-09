@@ -1,0 +1,473 @@
+
+.col-lg-4,
+.col-md-6,
+.col-sm-6,
+.col-12 {
+    padding: 0 6px;
+}
+
+.payments-content {
+    a {
+        text-decoration: none;
+        display: block;
+    }
+    .pay-card {
+        background: var(--navbar-bg);
+        border-radius: 12px;
+        padding: 20px 20px 0;
+        margin: 0 0 10px 0;
+        height: 200px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0 10px 0 rgba(94, 92, 154, 0.06);
+        cursor: pointer;
+        &:hover {
+            .icon-parent {
+                transform: translate(0, -5px);
+            }
+        }
+        .pay-card-title {
+            font-weight: 700;
+            color: var(--p-color);
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+        li {
+            .pay-item {
+                margin-top: 20px;
+                .cir {
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    align-items: center;
+                    border-radius: 50%;
+                    transition: border-color .2s ease-in-out,background-color .2s ease-in-out;
+                    border: 1px solid var(--border-color);
+                    background-color: var(--navbar-bg);
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+                .active {
+                    border: 6px solid $link;
+                }
+                .cir-title {
+                    font-size: .875rem;
+                    font-weight: 700;
+                    line-height: 22px;
+                    color: $iconActive;
+                    cursor: pointer;
+                    margin-top: -1px;
+                    margin-bottom: 0;
+                }
+            }
+            .numbers-menu {
+                padding-right: 25px;
+                .num {
+                    margin: 10px 0 0 0;
+                    font-weight: 400;
+                    letter-spacing: 0.6px;
+                }
+            }
+            .show {
+                display: none;
+            }
+        }
+        .pay-card-content {
+            .icon-parent {
+                height: 50px;
+                width: 50px;
+                border-radius: 14px;
+                margin: auto;
+                line-height: 50px;
+                transition: all 0.3s ease-in-out;
+                margin-bottom: 15px !important;
+                svg {
+                    height: 26px;
+                    width: 26px;
+                    fill: #FFF !important;
+                    padding-left: 1px;
+                    margin-top: -4px;
+                }
+            }
+            h6 {
+                margin: 15px 0 5px 0;
+                color: var(--p-color);
+                font-size: 0.8rem;
+                font-weight: 700 !important;
+            }
+            p {
+                margin: 0;
+                font-size: 0.8rem;
+                color: #adafca;
+            }
+        }
+        .soon {
+            position: absolute;
+            top: 16px;
+            left: 0px;
+            @media (max-width: $max-7) {
+                top: 16px;
+                left: 20px;
+            }
+            .text-sticker {
+                font-size: .8rem;
+                height: 32px;
+                padding: 0 14px;
+                border-radius: 200px;
+                background-color: var(--navbar-bg);
+                -webkit-box-shadow: 3px 5px 20px 0 rgba(94, 92, 154, 0.12);
+                box-shadow: 3px 5px 20px 0 rgba(94, 92, 154, 0.12);
+                font-weight: 700;
+                line-height: 32px;
+                .exam-code {
+                    color: var(--p-color);
+                    letter-spacing: 0.8px;
+                }
+            }
+        }
+    }
+}
+.payments-history {
+    background: var(--navbar-bg);
+    padding: 20px 35px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px 0 rgba(94, 92, 154, 0.06);
+    @media (max-width: $max-5) {
+        padding: 20px 10px
+    }
+    .absence-head {
+        margin: 10px 0 30px 0;
+        p {
+            color: var(--p-color);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-align: right;
+            margin: 0;
+        }
+        .payments-tabs {
+            text-align: left!important;
+            margin-right: auto;
+            width: auto;
+            display: flex;
+            height: auto;
+            padding-left: 20px;
+            border: none;
+            font-size: .75rem;
+            cursor: pointer;
+            background-color: var(--navbar-bg);
+            border-radius: 12px;
+            font-weight: 700;
+            color: var(--p-color);
+            transition: border-color .2s ease-in-out;
+            .payments-tab {
+                margin: 0 10px;
+                font-size: 0.75rem;
+            }
+            .active {
+                color: $link;
+            }
+        }
+    }
+    .table {
+        display: none;
+        td,
+        th {
+            border: 0;
+            padding: 1.2rem 0 0rem 0;
+            font-size: .8rem;
+            font-weight: 700;
+            color: var(--p-color);
+            @media (max-width: $max-5) {
+                font-size: .6rem;
+            }
+        }
+        thead th {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0 1rem 0;
+            font-size: .7rem;
+            font-weight: 700;
+            color: var(--p-color);
+            @media (max-width: $max-5) {
+                font-size: .6rem;
+            }
+        }
+        .light {
+            color: #8f91ac;
+            font-weight: 500;
+            font-size: .8rem;
+            font-weight: 500;
+            @media (max-width: $max-5) {
+                font-size: .6rem;
+            }
+        }
+        .pending {
+            color: #8f91ac;
+        }
+        .done {
+            color: $link;
+        }
+        .cur {
+            margin-left: 5px;
+            color: $link;
+        }
+        button {
+            color: #FFF;
+            width: 80px;
+            background: var(--main-color);
+            border-radius: 5px;
+            line-height: 17px;
+            height: 30px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            box-shadow: 0 0 10px 0 rgba(94, 92, 154, 0.06);
+            transition: all 0.3s ease-in-out;
+            outline: none;
+            @media (max-width: $max-5) {
+                font-size: .6rem;
+                width: 50px;
+            }
+            &:hover {
+                background: $p;
+            }
+            &:active {
+                outline: none;
+            }
+        }
+    }
+    .show {
+        display: table;
+    }
+}
+
+.hash {
+    color: $link !important;
+    margin-right: 4px !important;
+}
+
+.popup {
+    opacity: 0.8;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out 0s, visibility 0.5s ease-in-out 0s, transform 0.3s ease-in-out;
+    overflow: auto;
+    .popup-overlay {
+        background-color: rgba(21, 21, 31, 0.96);
+        opacity: 0.8;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999999999999999999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out 0s, visibility 0.5s ease-in-out 0s, transform 0.3s ease-in-out;
+        overflow: auto;
+    }
+    .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 9999999999999999999999999999999999999;
+        transform: translate(-50%, -100px);
+        color: var(--p-color);
+        transition:transform 0.5s ease-in-out;
+        @media (max-width: $max-12) {
+            transform: translate(-50%, -60%);
+        }
+        @media (max-width: $max-5) {
+            width: 90%;
+        }
+        .form-container {
+            height: 100%;
+            .form-card {
+                background: var(--navbar-bg);
+                width: 475px;
+                padding: 50px 55px;
+                border-radius: 12px;
+                box-shadow: 0 0 60px 0 rgba(94,92,154,.12);
+                position: absolute;
+                top: 50%;
+                left: 54%;
+                transform: translate(-50%, -50%);
+                @media (max-width: $max-12) {
+                    position: static;
+                    transform: translate(0, 0);
+                    margin: 30px auto;
+                }
+                @media (max-width: $max-5) {
+                    width: 100%;
+                    padding: 40px 15px;
+                }
+                .close-o {
+                    height: 35px;
+                    width: 35px;
+                    line-height: 35px;
+                    border-radius: 12px;
+                    background-color: var(--main-color);
+                    position: absolute;
+                    top: -15px;
+                    right: -15px;
+                    text-align: center;
+                    cursor: pointer;
+                    svg {
+                        height: 12px;
+                        width: 12px;
+                        fill: #FFF;
+                        stroke: #FFF;
+                    }
+                }
+                .form-box-title {
+                    font-size: 1.4rem;
+                    text-align: center;
+                    font-weight: 700;
+                    color: var(--p-color);
+                    margin-bottom: 40px;
+                }
+                .more-info {
+                    font-weight: 700;
+                    color: var(--p-color);
+                    margin: 5px 0;
+                    .light {
+                        color: #adafca;
+                        font-weight: 700;
+                        font-size: .9rem;
+                    }
+                }
+                .form {
+                    margin-top: 0;
+                    width: 100%;
+                    position: relative;
+                    .col-12,
+                    .col-6 {
+                        padding: 0 10px 0 10px;
+                    }
+                    .form-group {
+                        width: 100%;
+                        position: relative;
+                        margin: 10px 0;
+                        label {
+                            color: #adafca;
+                            font-size: 0.85rem;
+                            font-weight: 600;
+                            position: absolute;
+                            top: 19px;
+                            right: 20px;
+                            transition: all .3s ease-in-out;
+                            pointer-events: none;
+                            display: block;
+                            margin: 0;
+                            line-height: 1em;
+                        }
+                        .form-control {
+                            height: 52px;
+                            padding: 0 18px;
+                            background-color: var(--navbar-bg);
+                            border: 1px solid var(--border-color);
+                            color: var(--p-color);
+                            transition: border-color .2s ease-in-out;
+                            width: 100%;
+                            border-radius: 12px;
+                            font-size: 0.9rem;
+                            font-weight: 700;
+                            &:focus {
+                                border-color: var(--main-color);
+                                box-shadow: none;
+                                outline: none;
+                            }
+                        }
+                        select {
+                            cursor: pointer;
+                        }
+                    }
+                    .create-account-btn {
+                        text-decoration: none;
+                        width: 100%;
+                        margin: auto;
+                        color: #FFF;
+                        display: inline-block;
+                        height: 48px;
+                        border-radius: 10px;
+                        font-size: .875rem;
+                        font-weight: 700;
+                        text-align: center;
+                        line-height: 48px;
+                        cursor: pointer;
+                        margin-top: 15px;
+                        transition: background-color .2s ease-in-out;
+                        background-color: var(--main-color);
+                        border: 0;
+                        svg {
+                            height: 18px;
+                            margin-left: 4px;
+                            path {
+                                fill: #FFF;
+                            }
+                        }
+                        &:hover {
+                            background-color: var(--main-color);
+                        }
+                    }
+                    p.text {
+                        margin-top: 30px;
+                        font-size: .875rem;
+                        line-height: 1.7142857143em;
+                        font-weight: 500;
+                        color: var(--p-color);
+                        a {
+                            text-decoration: none;
+                            color: $link;
+                            font-weight: 700;
+                        }
+                    }
+                    .active-input {
+                        label {
+                            background: var(--navbar-bg);
+                            padding: 0 6px;
+                            font-size: 0.7rem;
+                            top: -6px;
+                            right: 12px;
+                        }
+                    }
+                }
+            }
+            .pay-card {
+                .pay-card-title {
+                    font-weight: 700;
+                    color: var(--p-color);
+                    font-size: 0.8rem;
+                    margin-bottom: 15px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+.open-popup {
+    opacity: 1 !important;
+    visibility: visible !important;
+    .popup-overlay {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    .popup-content {
+        transform: translate(-50%, -50%) !important;
+    }
+}
+.filepond--credits {
+    display: none;
+}
+.filepond--drip {
+    background: var(--navbar-bg);
+    opacity: 1;
+    border: 1px solid var(--border-color);
+    color: var(--p-color);
+}
+.filepond--drop-label {
+    color: var(--p-color);
+}
