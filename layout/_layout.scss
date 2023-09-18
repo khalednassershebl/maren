@@ -621,10 +621,9 @@ body {
             }
         }
     }
-    .user-container {
+    .user-container, .user-container-page {
         background: var(--navbar-bg);
         position: fixed;
-        // height: 500px;
         padding: 55px 55px;
         width: 750px;
         z-index: 15;
@@ -698,6 +697,12 @@ body {
                     padding: 35px 10px;
                     border-radius: 16px;
                     border: 1px solid var(--border-color);
+                    background: {
+                        image: url(../assets/images/pattern.png);
+                        size: cover;
+                        position: center center;
+                    }
+                    background-blend-mode: overlay;
                     @media (max-width: $max-5) {
                         margin-bottom: 15px;
                     }
@@ -715,6 +720,91 @@ body {
                             height: 100px;
                             width: 100px;
                             border-radius: 50%;
+                            margin: 0;
+                            background: {
+                                size: cover;
+                                position: center center;
+                                repeat: no-repeat;
+                            }
+                        }
+                    }
+                    .user-info-parent {
+                        h3 {
+                            color: var(--p-color);
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                            margin: 0 0 2px 0;
+                        }
+                        span {
+                            color: #adafca;
+                            font-size: 0.85rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .user-container-page {
+        position: unset;
+        display: block;
+        opacity: 1;
+        height: auto;
+        width: auto;
+        transform: translate(0%, 25%) scale(1);
+        @media (max-width: $max-7) {
+            border-radius: 16px;
+        }
+        @media (max-width: $max-5) {
+            transform: translate(0%, 0%) scale(1);
+        }
+        .user-container-content {
+            margin-bottom: 0;
+            text-align: center;
+            .user-container-content-header {
+                margin-bottom: 45px;
+                h3 {
+                    color: var(--p-color);
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    margin: 0 0 2px 0;
+                }
+                span {
+                    color: #adafca;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                }
+            }
+            .user-container-content-toggle {
+                .user-container-content-toggle-card {
+                    margin: auto;
+                    background: var(--body-bg);
+                    padding: 35px 10px;
+                    border-radius: 16px;
+                    border: 1px solid var(--border-color);
+                    background: {
+                        image: url(../assets/images/pattern.png);
+                        size: cover;
+                        position: center center;
+                    }
+                    background-blend-mode: overlay;
+                    @media (max-width: $max-5) {
+                        margin-bottom: 15px;
+                    }
+                    .user-image-parent {
+                        height: 150px;
+                        width: 150px;
+                        margin: 0 auto 15px auto;
+                        background-color: var(--navbar-bg);
+                        border: 2px solid var(--border-color);
+                        border-radius: 24px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        figure {
+                            height: 140px;
+                            width: 140px;
+                            border-radius: 24px;
                             margin: 0;
                             background: {
                                 size: cover;
